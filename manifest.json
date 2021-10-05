@@ -30,7 +30,7 @@
                 "assets/images/photos/*"
             ],
             "matches": [
-                "https://*/*"
+                "<all_urls>"
             ]
         }
     ]
