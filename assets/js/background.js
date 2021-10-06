@@ -24,8 +24,8 @@ const photosLength = photos.length;
 chrome.runtime.onMessage.addListener(function (message, sender, senderResponse) {
     const randomPhoto = photos[Math.floor(Math.random() * photosLength)];
     const photoURL = `${baseURL}${randomPhoto}`;
-    if (message.msg === "image") {
-        senderResponse({ data: {link: photoURL}, index: message.index });
+    if (message.msg === 'replaceImage') {
+        senderResponse({ data: { photoURL }, index: message.index });
         return true;  // Will respond asynchronously.
     }
 });
